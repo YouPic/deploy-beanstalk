@@ -1,9 +1,15 @@
-FROM fstab/aws-cli
+FROM ubuntu:14.04
 
-USER root
+RUN apt-get update && \
+    apt-get upgrade -y
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get install -y --no-install-recommends \
+    ssh \
+    python \
+    python-pip \
     curl \
     ca-certificates \
     wget \
     git
+
+RUN pip install awscli
