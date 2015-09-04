@@ -10,6 +10,7 @@ RUN apt-get install -y --no-install-recommends \
     curl \
     ca-certificates \
     wget \
-    git
+    git \
+    zip
 
 RUN pip install awscli
